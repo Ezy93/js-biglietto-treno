@@ -14,22 +14,32 @@ let teenTicketPrice = "";
 let oldDiscount = fullTicketPrice * 40 / 100;
 let oldTicketPrice = "";
 
-if (userAge < 18) {
+
+
+
+
+
+
+
+if (!isNaN( userAge < 18) && !isNaN( travelLength ) ) {
 
     teenTicketPrice = fullTicketPrice - teenDiscount;
     console.log(teenTicketPrice.toFixed(2));
     document.getElementById("ticket").innerHTML += teenTicketPrice;
 
-} else if (userAge > 65 ){
+} else if (!isNaN( userAge > 65 ) && !isNaN( travelLength ) ){
     
     oldTicketPrice = fullTicketPrice - oldDiscount;
     console.log(oldTicketPrice.toFixed(2));
     document.getElementById("ticket").innerHTML += oldTicketPrice;
 
-} else {
+} else if (!isNaN( userAge ) && !isNaN( travelLength ) ) {
 
     document.getElementById("ticket").innerHTML += fullTicketPrice;
-    
+
+} else {
+    console.error("non sono stati inseriti valori numerici");
+    document.getElementById("ticket").innerHTML = "ricarica la pagina e inserisci valori numerici per calcolare il costo del biglietto";
 }
 
 
