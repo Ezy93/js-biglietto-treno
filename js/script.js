@@ -18,14 +18,21 @@ if (userAge < 18) {
 
     teenTicketPrice = fullTicketPrice - teenDiscount;
     console.log(teenTicketPrice.toFixed(2));
-    
-}
+    document.getElementById("ticket").innerHTML += teenTicketPrice;
 
-if (userAge > 65 ){
+} else if (userAge > 65 ){
     
     oldTicketPrice = fullTicketPrice - oldDiscount;
     console.log(oldTicketPrice.toFixed(2));
+    document.getElementById("ticket").innerHTML += oldTicketPrice;
+
+} else {
+
+    document.getElementById("ticket").innerHTML += fullTicketPrice;
+    
 }
+
+
 
 
 
