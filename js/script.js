@@ -25,17 +25,17 @@ if (!isNaN ( userAge) && ( userAge < 18) && !isNaN( travelLength ) ) {
 
     teenTicketPrice = fullTicketPrice - teenDiscount;
     console.log(teenTicketPrice.toFixed(2));
-    document.getElementById("ticket").innerHTML += teenTicketPrice;
+    document.getElementById("ticket").innerHTML += teenTicketPrice.toFixed(2);
 
 } else if (!isNaN ( userAge ) && ( userAge > 65 ) && !isNaN( travelLength ) ){
     
     oldTicketPrice = fullTicketPrice - oldDiscount;
     console.log(oldTicketPrice.toFixed(2));
-    document.getElementById("ticket").innerHTML += oldTicketPrice;
+    document.getElementById("ticket").innerHTML += oldTicketPrice.toFixed(2);
 
 } else if (!isNaN( userAge ) && !isNaN( travelLength ) ) {
 
-    document.getElementById("ticket").innerHTML += fullTicketPrice;
+    document.getElementById("ticket").innerHTML += fullTicketPrice.toFixed(2);
 
 } else {
 
